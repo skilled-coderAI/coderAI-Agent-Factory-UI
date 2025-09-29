@@ -160,80 +160,80 @@ export function CreateAgent() {
         <Button 
           variant="ghost" 
           onClick={() => navigate("/")} 
-          className="p-2 text-slate-300 hover:text-white hover:bg-slate-800/50 transition-all duration-300"
+          className="p-2 text-slate-300 hover:text-white hover:bg-slate-800/50 transition-all duration-300 rounded-full"
           data-testid="back-button"
         >
-          <ArrowLeft className="w-4 h-4" />
+          <ArrowLeft className="w-5 h-5" />
         </Button>
-        <h1 className="text-3xl font-bold bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent flex items-center">
+        <h1 className="text-4xl font-bold gradient-text flex items-center animate-pulse">
           Create AI Agent
-          <Sparkles className="w-8 h-8 ml-3 text-blue-400 animate-pulse" />
+          <Sparkles className="w-10 h-10 ml-4 text-blue-400 animate-bounce" />
         </h1>
       </div>
 
       {/* Agent Category Selection */}
-      <Card className="bg-slate-800/50 border-slate-700/50 backdrop-blur-sm">
+      <Card className="bg-slate-800/50 border-slate-700/50 backdrop-blur-sm vibe-bg rounded-2xl shadow-xl">
         <CardHeader>
-          <CardTitle className="text-white">Choose Agent Type</CardTitle>
+          <CardTitle className="text-white text-2xl">Choose Agent Type</CardTitle>
           <CardDescription className="text-slate-400">
             Select the type of agent you want to create
           </CardDescription>
         </CardHeader>
         <CardContent>
           <Tabs value={agentCategory} onValueChange={(value: any) => setAgentCategory(value)} className="space-y-4">
-            <TabsList className="grid grid-cols-3 bg-slate-700">
-              <TabsTrigger value="regular" className="data-[state=active]:bg-slate-600">
-                <Bot className="w-4 h-4 mr-2" />
+            <TabsList className="grid grid-cols-3 bg-slate-700/50 p-1 rounded-xl">
+              <TabsTrigger value="regular" className="data-[state=active]:bg-blue-500/30 data-[state=active]:text-white rounded-lg py-3">
+                <Bot className="w-5 h-5 mr-2" />
                 Regular Agent
               </TabsTrigger>
-              <TabsTrigger value="specialized" className="data-[state=active]:bg-slate-600">
-                <Zap className="w-4 h-4 mr-2" />
+              <TabsTrigger value="specialized" className="data-[state=active]:bg-purple-500/30 data-[state=active]:text-white rounded-lg py-3">
+                <Zap className="w-5 h-5 mr-2" />
                 Specialized Agent
               </TabsTrigger>
-              <TabsTrigger value="semantic" className="data-[state=active]:bg-slate-600">
-                <Brain className="w-4 h-4 mr-2" />
+              <TabsTrigger value="semantic" className="data-[state=active]:bg-pink-500/30 data-[state=active]:text-white rounded-lg py-3">
+                <Brain className="w-5 h-5 mr-2" />
                 Semantic Agent
               </TabsTrigger>
             </TabsList>
 
             <TabsContent value="regular" className="space-y-4">
-              <div className="bg-slate-700/50 p-4 rounded-lg">
-                <h3 className="text-white font-medium mb-2">Regular AI Agent</h3>
-                <p className="text-slate-300 text-sm mb-3">
+              <div className="bg-slate-700/50 p-6 rounded-xl vibe-bg">
+                <h3 className="text-white font-bold text-xl mb-3">Regular AI Agent</h3>
+                <p className="text-slate-300 text-base mb-4">
                   Basic AI agent with customizable instructions and capabilities. Perfect for general-purpose tasks.
                 </p>
-                <div className="flex flex-wrap gap-2">
-                  <Badge variant="outline" className="border-blue-500 text-blue-400">Custom Instructions</Badge>
-                  <Badge variant="outline" className="border-blue-500 text-blue-400">Flexible Tools</Badge>
-                  <Badge variant="outline" className="border-blue-500 text-blue-400">General Purpose</Badge>
+                <div className="flex flex-wrap gap-3">
+                  <Badge variant="outline" className="border-blue-500 text-blue-400 text-base px-3 py-1 rounded-full">Custom Instructions</Badge>
+                  <Badge variant="outline" className="border-blue-500 text-blue-400 text-base px-3 py-1 rounded-full">Flexible Tools</Badge>
+                  <Badge variant="outline" className="border-blue-500 text-blue-400 text-base px-3 py-1 rounded-full">General Purpose</Badge>
                 </div>
               </div>
             </TabsContent>
 
             <TabsContent value="specialized" className="space-y-4">
-              <div className="bg-slate-700/50 p-4 rounded-lg">
-                <h3 className="text-white font-medium mb-2">Specialized Agent (DeepCode Integration)</h3>
-                <p className="text-slate-300 text-sm mb-3">
+              <div className="bg-slate-700/50 p-6 rounded-xl vibe-bg">
+                <h3 className="text-white font-bold text-xl mb-3">Specialized Agent (DeepCode Integration)</h3>
+                <p className="text-slate-300 text-base mb-4">
                   Pre-configured agents with specific roles and capabilities for advanced workflows.
                 </p>
-                <div className="flex flex-wrap gap-2">
-                  <Badge variant="outline" className="border-green-500 text-green-400">MCP Integration</Badge>
-                  <Badge variant="outline" className="border-green-500 text-green-400">Predefined Roles</Badge>
-                  <Badge variant="outline" className="border-green-500 text-green-400">Workflow Optimized</Badge>
+                <div className="flex flex-wrap gap-3">
+                  <Badge variant="outline" className="border-green-500 text-green-400 text-base px-3 py-1 rounded-full">MCP Integration</Badge>
+                  <Badge variant="outline" className="border-green-500 text-green-400 text-base px-3 py-1 rounded-full">Predefined Roles</Badge>
+                  <Badge variant="outline" className="border-green-500 text-green-400 text-base px-3 py-1 rounded-full">Workflow Optimized</Badge>
                 </div>
               </div>
             </TabsContent>
 
             <TabsContent value="semantic" className="space-y-4">
-              <div className="bg-slate-700/50 p-4 rounded-lg">
-                <h3 className="text-white font-medium mb-2">Semantic Agent (Serena Integration)</h3>
-                <p className="text-slate-300 text-sm mb-3">
+              <div className="bg-slate-700/50 p-6 rounded-xl vibe-bg">
+                <h3 className="text-white font-bold text-xl mb-3">Semantic Agent (Serena Integration)</h3>
+                <p className="text-slate-300 text-base mb-4">
                   Advanced code-aware agents with semantic understanding and LSP integration.
                 </p>
-                <div className="flex flex-wrap gap-2">
-                  <Badge variant="outline" className="border-purple-500 text-purple-400">LSP Integration</Badge>
-                  <Badge variant="outline" className="border-purple-500 text-purple-400">Symbol-Level Editing</Badge>
-                  <Badge variant="outline" className="border-purple-500 text-purple-400">Code Intelligence</Badge>
+                <div className="flex flex-wrap gap-3">
+                  <Badge variant="outline" className="border-purple-500 text-purple-400 text-base px-3 py-1 rounded-full">LSP Integration</Badge>
+                  <Badge variant="outline" className="border-purple-500 text-purple-400 text-base px-3 py-1 rounded-full">Symbol-Level Editing</Badge>
+                  <Badge variant="outline" className="border-purple-500 text-purple-400 text-base px-3 py-1 rounded-full">Code Intelligence</Badge>
                 </div>
               </div>
             </TabsContent>
@@ -242,74 +242,74 @@ export function CreateAgent() {
       </Card>
 
       {/* Agent Configuration Form */}
-      <Card className="bg-slate-800/50 border-slate-700/50 backdrop-blur-sm">
+      <Card className="bg-slate-800/50 border-slate-700/50 backdrop-blur-sm vibe-bg rounded-2xl shadow-xl">
         <CardHeader>
-          <CardTitle className="text-white">Agent Configuration</CardTitle>
+          <CardTitle className="text-white text-2xl">Agent Configuration</CardTitle>
           <CardDescription className="text-slate-400">
             Configure your {agentCategory} agent settings
           </CardDescription>
         </CardHeader>
-        <CardContent className="space-y-4">
+        <CardContent className="space-y-6">
           {/* Basic Information */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <Label htmlFor="name" className="text-slate-300">Agent Name</Label>
+              <Label htmlFor="name" className="text-slate-300 text-lg">Agent Name</Label>
               <Input
                 id="name"
                 value={formData.name}
                 onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
                 placeholder="e.g., CodeMaster Pro"
-                className="bg-slate-900/50 border-slate-600 text-white placeholder:text-slate-400 focus:border-blue-500"
+                className="bg-slate-900/50 border-slate-600 text-white placeholder:text-slate-400 focus:border-blue-500 text-lg p-6 rounded-xl"
               />
             </div>
 
             <div>
-              <Label htmlFor="model" className="text-slate-300">Model</Label>
+              <Label htmlFor="model" className="text-slate-300 text-lg">Model</Label>
               <Select
                 value={formData.model}
                 onValueChange={(value) => setFormData(prev => ({ ...prev, model: value }))}
               >
-                <SelectTrigger className="bg-slate-900/50 border-slate-600 text-white">
+                <SelectTrigger className="bg-slate-900/50 border-slate-600 text-white text-lg p-6 rounded-xl">
                   <SelectValue />
                 </SelectTrigger>
-                <SelectContent className="bg-slate-800 border-slate-600">
-                  <SelectItem value="gpt-4o">GPT-4o</SelectItem>
-                  <SelectItem value="gpt-4">GPT-4</SelectItem>
-                  <SelectItem value="gpt-3.5-turbo">GPT-3.5 Turbo</SelectItem>
-                  <SelectItem value="claude-3-opus">Claude 3 Opus</SelectItem>
-                  <SelectItem value="claude-3-sonnet">Claude 3 Sonnet</SelectItem>
+                <SelectContent className="bg-slate-800 border-slate-600 rounded-xl">
+                  <SelectItem value="gpt-4o" className="text-lg p-3">GPT-4o</SelectItem>
+                  <SelectItem value="gpt-4" className="text-lg p-3">GPT-4</SelectItem>
+                  <SelectItem value="gpt-3.5-turbo" className="text-lg p-3">GPT-3.5 Turbo</SelectItem>
+                  <SelectItem value="claude-3-opus" className="text-lg p-3">Claude 3 Opus</SelectItem>
+                  <SelectItem value="claude-3-sonnet" className="text-lg p-3">Claude 3 Sonnet</SelectItem>
                 </SelectContent>
               </Select>
             </div>
           </div>
 
           <div>
-            <Label htmlFor="description" className="text-slate-300">Description</Label>
+            <Label htmlFor="description" className="text-slate-300 text-lg">Description</Label>
             <Textarea
               id="description"
               value={formData.description}
               onChange={(e) => setFormData(prev => ({ ...prev, description: e.target.value }))}
               placeholder="Describe what your agent will do..."
-              rows={3}
-              className="bg-slate-900/50 border-slate-600 text-white placeholder:text-slate-400 focus:border-blue-500"
+              rows={4}
+              className="bg-slate-900/50 border-slate-600 text-white placeholder:text-slate-400 focus:border-blue-500 text-lg p-6 rounded-xl"
             />
           </div>
 
           {/* Agent Type Specific Fields */}
           {agentCategory === 'specialized' && specializedTypes && (
             <div>
-              <Label htmlFor="agent_type" className="text-slate-300">Specialized Type</Label>
+              <Label htmlFor="agent_type" className="text-slate-300 text-lg">Specialized Type</Label>
               <Select
                 value={formData.agent_type}
                 onValueChange={(value) => setFormData(prev => ({ ...prev, agent_type: value }))}
               >
-                <SelectTrigger className="bg-slate-900/50 border-slate-600 text-white">
+                <SelectTrigger className="bg-slate-900/50 border-slate-600 text-white text-lg p-6 rounded-xl">
                   <SelectValue placeholder="Select specialized type" />
                 </SelectTrigger>
-                <SelectContent className="bg-slate-800 border-slate-600">
+                <SelectContent className="bg-slate-800 border-slate-600 rounded-xl">
                   {Object.entries(specializedTypes).map(([type, config]) => (
-                    <SelectItem key={type} value={type}>
-                      <div className="flex items-center space-x-2">
+                    <SelectItem key={type} value={type} className="text-lg p-3">
+                      <div className="flex items-center space-x-3">
                         <span className="capitalize">{type}</span>
                       </div>
                     </SelectItem>
@@ -317,13 +317,13 @@ export function CreateAgent() {
                 </SelectContent>
               </Select>
               {formData.agent_type && specializedTypes[formData.agent_type] && (
-                <div className="mt-2 p-3 bg-slate-700/50 rounded-lg">
-                  <p className="text-slate-300 text-sm mb-2">
+                <div className="mt-4 p-5 bg-slate-700/50 rounded-xl vibe-bg">
+                  <p className="text-slate-300 text-base mb-3">
                     {specializedTypes[formData.agent_type].instructions}
                   </p>
-                  <div className="flex flex-wrap gap-1">
+                  <div className="flex flex-wrap gap-2">
                     {specializedTypes[formData.agent_type].capabilities.map((cap) => (
-                      <Badge key={cap} variant="secondary" className="text-xs bg-slate-600 text-slate-300">
+                      <Badge key={cap} variant="secondary" className="text-base bg-slate-600 text-slate-300 px-3 py-1 rounded-full">
                         {cap.replace('_', ' ')}
                       </Badge>
                     ))}
@@ -334,23 +334,23 @@ export function CreateAgent() {
           )}
 
           {agentCategory === 'semantic' && semanticTypes && (
-            <div className="space-y-4">
+            <div className="space-y-6">
               <div>
-                <Label htmlFor="semantic_type" className="text-slate-300">Semantic Type</Label>
+                <Label htmlFor="semantic_type" className="text-slate-300 text-lg">Semantic Type</Label>
                 <Select
                   value={formData.agent_type}
                   onValueChange={(value) => setFormData(prev => ({ ...prev, agent_type: value }))}
                 >
-                  <SelectTrigger className="bg-slate-900/50 border-slate-600 text-white">
+                  <SelectTrigger className="bg-slate-900/50 border-slate-600 text-white text-lg p-6 rounded-xl">
                     <SelectValue placeholder="Select semantic type" />
                   </SelectTrigger>
-                  <SelectContent className="bg-slate-800 border-slate-600">
+                  <SelectContent className="bg-slate-800 border-slate-600 rounded-xl">
                     {Object.entries(semanticTypes).map(([type, config]) => (
-                      <SelectItem key={type} value={type}>
-                        <div className="flex items-center space-x-2">
-                          {type === 'semantic_generator' && <Code className="w-4 h-4" />}
-                          {type === 'semantic_refactorer' && <RefreshCw className="w-4 h-4" />}
-                          {type === 'semantic_analyzer' && <Search className="w-4 h-4" />}
+                      <SelectItem key={type} value={type} className="text-lg p-3">
+                        <div className="flex items-center space-x-3">
+                          {type === 'semantic_generator' && <Code className="w-5 h-5" />}
+                          {type === 'semantic_refactorer' && <RefreshCw className="w-5 h-5" />}
+                          {type === 'semantic_analyzer' && <Search className="w-5 h-5" />}
                           <span className="capitalize">{type.replace('semantic_', '')}</span>
                         </div>
                       </SelectItem>
@@ -358,13 +358,13 @@ export function CreateAgent() {
                   </SelectContent>
                 </Select>
                 {formData.agent_type && semanticTypes[formData.agent_type] && (
-                  <div className="mt-2 p-3 bg-slate-700/50 rounded-lg">
-                    <p className="text-slate-300 text-sm mb-2">
+                  <div className="mt-4 p-5 bg-slate-700/50 rounded-xl vibe-bg">
+                    <p className="text-slate-300 text-base mb-3">
                       {semanticTypes[formData.agent_type].instructions}
                     </p>
-                    <div className="flex flex-wrap gap-1">
+                    <div className="flex flex-wrap gap-2">
                       {semanticTypes[formData.agent_type].semantic_features?.map((feature) => (
-                        <Badge key={feature} variant="outline" className="text-xs border-purple-500 text-purple-400">
+                        <Badge key={feature} variant="outline" className="text-base border-purple-500 text-purple-400 px-3 py-1 rounded-full">
                           {feature}
                         </Badge>
                       ))}
@@ -374,15 +374,15 @@ export function CreateAgent() {
               </div>
 
               <div>
-                <Label htmlFor="project_path" className="text-slate-300">Project Path (Optional)</Label>
+                <Label htmlFor="project_path" className="text-slate-300 text-lg">Project Path (Optional)</Label>
                 <Input
                   id="project_path"
                   value={formData.project_path}
                   onChange={(e) => setFormData(prev => ({ ...prev, project_path: e.target.value }))}
                   placeholder="/path/to/your/project"
-                  className="bg-slate-900/50 border-slate-600 text-white placeholder:text-slate-400 focus:border-purple-500"
+                  className="bg-slate-900/50 border-slate-600 text-white placeholder:text-slate-400 focus:border-purple-500 text-lg p-6 rounded-xl"
                 />
-                <p className="text-slate-400 text-xs mt-1">
+                <p className="text-slate-400 text-sm mt-2">
                   Link this agent to a specific codebase for enhanced semantic understanding
                 </p>
               </div>
@@ -391,22 +391,22 @@ export function CreateAgent() {
 
           {agentCategory === 'regular' && (
             <div>
-              <Label htmlFor="requirements" className="text-slate-300">Instructions</Label>
+              <Label htmlFor="requirements" className="text-slate-300 text-lg">Instructions</Label>
               <Textarea
                 id="requirements"
                 value={formData.requirementsText}
                 onChange={(e) => setFormData(prev => ({ ...prev, requirementsText: e.target.value }))}
                 placeholder="Define the specific instructions, behaviors, and capabilities your agent should have..."
-                rows={6}
-                className="bg-slate-900/50 border-slate-600 text-white placeholder:text-slate-400 focus:border-blue-500"
+                rows={8}
+                className="bg-slate-900/50 border-slate-600 text-white placeholder:text-slate-400 focus:border-blue-500 text-lg p-6 rounded-xl"
               />
             </div>
           )}
 
           {/* Advanced Settings */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <Label htmlFor="temperature" className="text-slate-300">Temperature</Label>
+              <Label htmlFor="temperature" className="text-slate-300 text-lg">Temperature</Label>
               <Input
                 id="temperature"
                 type="number"
@@ -415,29 +415,29 @@ export function CreateAgent() {
                 step="0.1"
                 value={formData.temperature}
                 onChange={(e) => setFormData(prev => ({ ...prev, temperature: parseFloat(e.target.value) }))}
-                className="bg-slate-900/50 border-slate-600 text-white"
+                className="bg-slate-900/50 border-slate-600 text-white text-lg p-6 rounded-xl"
               />
-              <p className="text-slate-400 text-xs mt-1">
+              <p className="text-slate-400 text-sm mt-2">
                 Controls randomness: 0 = focused, 1 = balanced, 2 = creative
               </p>
             </div>
           </div>
 
           {/* Create Button */}
-          <div className="flex justify-end space-x-3 pt-4">
+          <div className="flex justify-end space-x-4 pt-6">
             <Button 
               onClick={handleSubmit}
               disabled={!formData.name || !formData.agent_type || createAgentMutation.isPending}
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-8"
+              className="btn-vibe shadow-xl hover:shadow-2xl px-8 py-4 text-xl rounded-full"
             >
               {createAgentMutation.isPending ? (
                 <>
-                  <Zap className="w-4 h-4 mr-2 animate-spin" />
+                  <Zap className="w-6 h-6 mr-3 animate-spin" />
                   Creating...
                 </>
               ) : (
                 <>
-                  <Sparkles className="w-4 h-4 mr-2" />
+                  <Sparkles className="w-6 h-6 mr-3" />
                   Create Agent
                 </>
               )}

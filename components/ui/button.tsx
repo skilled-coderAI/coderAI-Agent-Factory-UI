@@ -20,12 +20,21 @@ const buttonVariants = cva(
         ghost:
           "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
         link: "text-primary underline-offset-4 hover:underline",
+        // Vibrant variants
+        vibe:
+          "bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg hover:from-blue-600 hover:to-purple-700 transform hover:scale-105 transition-all duration-300",
+        vibeSecondary:
+          "bg-gradient-to-r from-purple-500 to-pink-600 text-white shadow-lg hover:from-purple-600 hover:to-pink-700 transform hover:scale-105 transition-all duration-300",
+        vibeOutline:
+          "border-2 border-blue-500 text-blue-400 shadow-lg hover:bg-blue-500/20 hover:shadow-xl transform hover:scale-105 transition-all duration-300",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",
         sm: "h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5",
         lg: "h-10 rounded-md px-6 has-[>svg]:px-4",
+        xl: "h-12 rounded-lg px-8 text-base has-[>svg]:px-5",
         icon: "size-9",
+        iconLg: "size-12",
       },
     },
     defaultVariants: {

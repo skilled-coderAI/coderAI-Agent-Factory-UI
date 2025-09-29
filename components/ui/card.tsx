@@ -32,7 +32,7 @@ function CardTitle({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="card-title"
-      className={cn("leading-none font-semibold", className)}
+      className={cn("leading-none font-semibold text-xl", className)}
       {...props}
     />
   )
@@ -81,6 +81,53 @@ function CardFooter({ className, ...props }: React.ComponentProps<"div">) {
   )
 }
 
+// Enhanced Card Variants
+function VibeCard({ className, ...props }: React.ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="card"
+      className={cn(
+        "bg-card/80 text-card-foreground flex flex-col gap-6 rounded-2xl border-0 py-6 shadow-xl backdrop-blur-lg glass vibe-bg",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+function VibeCardHeader({ className, ...props }: React.ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="card-header"
+      className={cn(
+        "@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+function VibeCardTitle({ className, ...props }: React.ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="card-title"
+      className={cn("leading-none font-bold text-2xl gradient-text", className)}
+      {...props}
+    />
+  )
+}
+
+function VibeCardDescription({ className, ...props }: React.ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="card-description"
+      className={cn("text-muted-foreground text-base gradient-text-subtle", className)}
+      {...props}
+    />
+  )
+}
+
 export {
   Card,
   CardHeader,
@@ -89,4 +136,8 @@ export {
   CardAction,
   CardDescription,
   CardContent,
+  VibeCard,
+  VibeCardHeader,
+  VibeCardTitle,
+  VibeCardDescription
 }
